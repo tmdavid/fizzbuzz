@@ -10,5 +10,7 @@ FizzBuzz game goes about if divisible by 3, then it should say fizz, if by 5, bu
 
 2. run **ml_fb.py nb_epochs** to train. Generates a file called 'results.txt' with the Neural Net results after the training is completed. 
 
-3300 epochs trains with 100% accuracy all the numbers up to 100.
-2900 epochs trains with 100% accuracy all the numbers up to 50.
+* 3300 epochs trains with 100% accuracy all the numbers up to 100.
+
+
+* 2900 epochs trains with 100% accuracy all the numbers up to 50.
