@@ -7,7 +7,7 @@ if len(sys.argv)<2:
 else:
     nb_numbers = int(sys.argv[1])
 
-for i in range(1, nb_numbers):
+for i in range(1, nb_numbers+1):
     fizz = ""
     buzz = ""
     num = ""
