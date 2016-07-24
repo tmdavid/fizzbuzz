@@ -1,3 +1,5 @@
+import sys
+
 f = open("fizzbuzz.txt", 'w')
 
 if len(sys.argv)<2:
