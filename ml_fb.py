@@ -4,6 +4,7 @@ from keras.layers.core import Activation, TimeDistributedDense, RepeatVector, Me
 from keras.callbacks import EarlyStopping
 
 import numpy as np
+import sys
 
 def prepare_data(lines, dim=100000):
     X = []
@@ -28,7 +29,10 @@ def prepare_data(lines, dim=100000):
         Y.append(y_np)
     return np.asarray(X), np.asarray(Y)
 
-
+if len(sys.argv)<2:
+    raise ValueError('Not specified number of epochs')
+else:
+    nb_epochs = int(sys.argv[1])
 
 inner_layer = 200
 
@@ -37,6 +41,7 @@ dim = len(lines) + 2 #nums + fizz + buzz
 print dim
 X, Y = prepare_data(lines, dim)
 print "data prepared"
+print "Training data with shape: ", X.shape, " we gonna train for nb_epochs:", nb_epochs
 #print X, Y
 ml_train = True
 if ml_train:
@@ -47,7 +52,7 @@ if ml_train:
     fb_model.add(Activation('softmax'))
     fb_model.compile(loss='categorical_crossentropy', optimizer='sgd')
 
-    fb_model.fit(X, Y, batch_size=64, nb_epoch=3300, verbose=1, sample_weight=None, show_accuracy=True)
+    fb_model.fit(X, Y, batch_size=64, nb_epoch=nb_epochs, verbose=1, sample_weight=None, show_accuracy=True)
 
     predictions = fb_model.predict(X, batch_size=64, verbose=1)
     f = open("results.txt", "w")

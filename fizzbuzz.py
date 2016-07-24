@@ -1,6 +1,11 @@
 f = open("fizzbuzz.txt", 'w')
 
-for i in range(1, 100):
+if len(sys.argv)<2:
+    raise ValueError('Not specified number numbers')
+else:
+    nb_numbers = int(sys.argv[1])
+
+for i in range(1, nb_numbers):
     fizz = ""
     buzz = ""
     num = ""
