@@ -8,10 +8,9 @@ FizzBuzz game goes about if divisible by 3, then it should say fizz, if by 5, bu
 
 1. run **fizzbuzz.py nb_numbers** to generate. This generates the normal solutions of the problem, and generates a file called 'fizzbuzz.txt' with the results of it. This file is later used in 'ml_fb.py' to train the NN.
 
-2. run **ml_fb.py nb_epochs** to train. Generates a file called 'results.txt' with the Neural Net results after the training is completed. 
+2. run **ml_fb.py nb_epochs  nb_layers** to train. Generates a file called 'results.txt' with the Neural Net results after the training is completed. nb_layers is the number of layers to stack as hidden in the network. Apparently the more layers, the faster it trains, but at the cost of not getting to 100% accuracy, but close to it, 96-98%. 
 
 * 3300 epochs trains with 100% accuracy all the numbers up to 100.
-
 
 * 2900 epochs trains with 100% accuracy all the numbers up to 50.
 
