@@ -33,6 +33,11 @@ if len(sys.argv)<2:
     raise ValueError('Not specified number of epochs')
 else:
     nb_epochs = int(sys.argv[1])
+    stacked_layers = 1
+    if len(sys.argv)==3:
+        stacked_layers = int(sys.argv[2])
+
+
 
 inner_layer = 200
 
@@ -41,17 +46,21 @@ dim = len(lines) + 2 #nums + fizz + buzz
 print dim
 X, Y = prepare_data(lines, dim)
 print "data prepared"
-print "Training data with shape: ", X.shape, " we gonna train for nb_epochs:", nb_epochs
+
 #print X, Y
 ml_train = True
 if ml_train:
     #early_stopping = EarlyStopping(monitor='acc', patience=800)
     fb_model = Sequential()
     fb_model.add(Dense(output_dim=inner_layer, input_dim=dim))
+    print "stacking:" + str(stacked_layers) + " layers"
+    for _ in range(stacked_layers):
+        fb_model.add(Dense(output_dim=inner_layer, input_dim=inner_layer))
     fb_model.add(Dense(output_dim=dim, input_dim=inner_layer))
     fb_model.add(Activation('softmax'))
     fb_model.compile(loss='categorical_crossentropy', optimizer='sgd')
-
+    print "Training data with shape: ", X.shape, " we gonna train for nb_epochs:", nb_epochs
+    print fb_model.summary()
     fb_model.fit(X, Y, batch_size=64, nb_epoch=nb_epochs, verbose=1, sample_weight=None, show_accuracy=True)
 
     predictions = fb_model.predict(X, batch_size=64, verbose=1)
