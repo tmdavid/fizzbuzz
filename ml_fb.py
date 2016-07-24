@@ -33,7 +33,7 @@ if len(sys.argv)<2:
     raise ValueError('Not specified number of epochs')
 else:
     nb_epochs = int(sys.argv[1])
-    stacked_layers = 1
+    stacked_layers = 0
     if len(sys.argv)==3:
         stacked_layers = int(sys.argv[2])
 
