@@ -15,4 +15,4 @@ FizzBuzz game goes about if divisible by 3, then it should say fizz, if by 5, bu
 
 * 2900 epochs trains with 100% accuracy all the numbers up to 50.
 
-Be **careful if you want to train more than 100 or 150 numbers. If you go for numbers like 1000 or so, its gonna get shitty slow, and you may need to train for more than 5000 epochs. Use at own risk ** 
+Be **careful if you want to train more than 100 or 150 numbers. If you go for numbers like 1000 or so, its gonna get shitty slow, and you may need to train for more than 5000 epochs. Use at own risk** 
