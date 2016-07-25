@@ -4,7 +4,7 @@ The classic game fizzbuzz that now apparently is asked in many job interviews, a
 
 Implemented using Keras, which is a great deep learning library. On a night that I should be worried about my thesis.
 
-FizzBuzz game goes about if divisible by 3, then it should say fizz, if by 5, buzz, and if by both fizzbuzz.
+FizzBuzz game goes about if divisible by 3, then it should say fizz, if by 5, buzz, and if by both fizzbuzz, the number otherwise
 
 1. run **fizzbuzz.py nb_numbers** to generate. This generates the normal solutions of the problem, and generates a file called 'fizzbuzz.txt' with the results of it. This file is later used in 'ml_fb.py' to train the NN.
 
