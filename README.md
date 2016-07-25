@@ -14,5 +14,33 @@ FizzBuzz game goes about if divisible by 3, then it should say fizz, if by 5, bu
 * 3300 epochs trains with 100% accuracy all the numbers up to 100.
 
 * 2900 epochs trains with 100% accuracy all the numbers up to 50.
+* 8000+ epochs - 100% accuracy - numbers up to 1000
+
+975 fizzbuzz
+976 976
+977 977
+978 fizz
+979 979
+980 buzz
+981 fizz
+982 982
+983 983
+984 fizz
+985 buzz
+986 986
+987 fizz
+988 988
+989 989
+990 fizzbuzz
+991 991
+992 992
+993 fizz
+994 994
+995 buzz
+996 fizz
+997 997
+998 998
+999 fizz
+1000 buzz
 
 Be **careful if you want to train more than 100 or 150 numbers. If you go for numbers like 1000 or so, its gonna get shitty slow, and you may need to train for more than 5000 epochs. Use at own risk** 
